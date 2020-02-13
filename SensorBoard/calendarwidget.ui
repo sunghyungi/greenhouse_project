@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CalendarWidget</class>
+ <widget class="QWidget" name="CalendarWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>565</width>
+    <height>385</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>달력</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QCalendarWidget" name="cld_Data">
+     <property name="gridVisible">
+      <bool>true</bool>
+     </property>
+     <property name="horizontalHeaderFormat">
+      <enum>QCalendarWidget::ShortDayNames</enum>
+     </property>
+     <property name="verticalHeaderFormat">
+      <enum>QCalendarWidget::NoVerticalHeader</enum>
+     </property>
+     <property name="navigationBarVisible">
+      <bool>true</bool>
+     </property>
+     <property name="dateEditEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

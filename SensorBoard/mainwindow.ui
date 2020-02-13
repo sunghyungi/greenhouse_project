@@ -6,198 +6,607 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1226</width>
-    <height>553</height>
+    <width>1467</width>
+    <height>573</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>온실관리시스템</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableWidget" name="Sensor_table">
-    <property name="geometry">
-     <rect>
-      <x>25</x>
-      <y>41</y>
-      <width>591</width>
-      <height>391</height>
-     </rect>
-    </property>
-    <property name="rowCount">
-     <number>0</number>
-    </property>
-    <property name="columnCount">
-     <number>5</number>
-    </property>
-    <attribute name="horizontalHeaderDefaultSectionSize">
-     <number>80</number>
-    </attribute>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-    <column/>
-   </widget>
-   <widget class="QLabel" name="lbl_sensor">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>191</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sensor Data</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btn_Exit">
     <property name="geometry">
      <rect>
-      <x>1040</x>
-      <y>450</y>
-      <width>131</width>
-      <height>31</height>
+      <x>1240</x>
+      <y>330</y>
+      <width>71</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(186, 189, 182);</string>
     </property>
     <property name="text">
-     <string>Exit</string>
-    </property>
-   </widget>
-   <widget class="QCustomPlot" name="customPlot" native="true">
-    <property name="geometry">
-     <rect>
-      <x>640</x>
-      <y>40</y>
-      <width>551</width>
-      <height>391</height>
-     </rect>
+     <string>종료</string>
     </property>
    </widget>
    <widget class="QPushButton" name="btn_Refresh">
     <property name="geometry">
      <rect>
-      <x>920</x>
-      <y>450</y>
-      <width>111</width>
-      <height>31</height>
+      <x>1160</x>
+      <y>330</y>
+      <width>71</width>
+      <height>61</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(211, 215, 207);</string>
     </property>
     <property name="text">
-     <string>Refresh</string>
+     <string>새로고침</string>
     </property>
    </widget>
-   <widget class="QWidget" name="horizontalLayoutWidget">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>520</x>
-      <y>450</y>
-      <width>388</width>
-      <height>41</height>
+      <x>590</x>
+      <y>490</y>
+      <width>590</width>
+      <height>32</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
-      <widget class="QCheckBox" name="cb_Light">
-       <property name="text">
-        <string>light</string>
+      <widget class="QLabel" name="lbl_CurTime">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>30</height>
+        </size>
        </property>
-       <property name="checked">
-        <bool>true</bool>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Tem">
        <property name="text">
-        <string>tem</string>
+        <string>현재시간</string>
        </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="cb_Hum">
-       <property name="text">
-        <string>hum</string>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="cb_Pre">
+      <widget class="QLabel" name="lbl_Light">
        <property name="text">
-        <string>pre</string>
+        <string>조도: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_LightData">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_Tem">
+       <property name="text">
+        <string>온도: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_TemData">
+       <property name="minimumSize">
+        <size>
+         <width>50</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>50</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_Hum">
+       <property name="text">
+        <string>습도: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_HumData">
+       <property name="minimumSize">
+        <size>
+         <width>35</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>35</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_Pre">
+       <property name="text">
+        <string>기압: </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lbl_PreData">
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
-   <widget class="QComboBox" name="cbb_Mac">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>80</x>
-      <y>450</y>
-      <width>191</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="editable">
-     <bool>true</bool>
-    </property>
-    <property name="currentText">
-     <string notr="true">MacAdress</string>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <property name="duplicatesEnabled">
-     <bool>false</bool>
-    </property>
-    <property name="frame">
-     <bool>true</bool>
-    </property>
-    <item>
-     <property name="text">
-      <string>MacAdress</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="lbl_Mac">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>460</y>
-      <width>67</width>
-      <height>17</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Device:</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_manager">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>450</y>
-      <width>101</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>디바이스 등록</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="btn_Logout">
-    <property name="geometry">
-     <rect>
-      <x>1120</x>
+      <x>10</x>
       <y>10</y>
-      <width>89</width>
-      <height>25</height>
+      <width>571</width>
+      <height>511</height>
      </rect>
     </property>
-    <property name="text">
-     <string>로그아웃</string>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLabel" name="lbl_Year">
+             <property name="text">
+              <string>연도 : </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="cbb_Year">
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <item>
+              <property name="text">
+               <string>전체보기</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_Month">
+             <property name="text">
+              <string>월 : </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="cbb_Month">
+             <item>
+              <property name="text">
+               <string>전체보기</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_Day">
+             <property name="text">
+              <string>일 : </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QComboBox" name="cbb_Day">
+             <item>
+              <property name="text">
+               <string>전체보기</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(252, 233, 79);
+color: rgb(164, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>달력보기</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_Sensor">
+         <property name="text">
+          <string>Sensor Table</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="Sensor_table">
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <property name="columnCount">
+          <number>5</number>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>80</number>
+         </attribute>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+         <column/>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="lbl_Mac">
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>Device:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="cbb_Mac">
+           <property name="minimumSize">
+            <size>
+             <width>170</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="editable">
+            <bool>false</bool>
+           </property>
+           <property name="currentText">
+            <string notr="true">MacAdress</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <property name="duplicatesEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="frame">
+            <bool>true</bool>
+           </property>
+           <item>
+            <property name="text">
+             <string>MacAdress</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="img_Crop">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_manager">
+         <property name="maximumSize">
+          <size>
+           <width>120</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(252, 175, 62);</string>
+         </property>
+         <property name="text">
+          <string>디바이스 등록</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>10</y>
+      <width>552</width>
+      <height>470</height>
+     </rect>
     </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QCheckBox" name="cb_Light">
+         <property name="text">
+          <string>light</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_Tem">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 0, 0);</string>
+         </property>
+         <property name="text">
+          <string>tem</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_Hum">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 0, 255);</string>
+         </property>
+         <property name="text">
+          <string>hum</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_Pre">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(0, 255, 0);</string>
+         </property>
+         <property name="text">
+          <string>pre</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QCustomPlot" name="customPlot" native="true">
+       <property name="minimumSize">
+        <size>
+         <width>550</width>
+         <height>400</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>10</y>
+      <width>271</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <item>
+      <widget class="QLabel" name="lbl_Manager">
+       <property name="text">
+        <string>관리자</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_Logout">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(186, 189, 182);</string>
+       </property>
+       <property name="text">
+        <string>로그아웃</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>60</y>
+      <width>291</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_4">
+     <item>
+      <widget class="QComboBox" name="cbb_Sensor">
+       <item>
+        <property name="text">
+         <string>센서</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>light</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>pre</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>tem</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>hum</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="le_Mean">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="le_Max">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="lbl_Min">
+         <property name="text">
+          <string>최소 값 : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="lbl_Mean">
+         <property name="text">
+          <string>평균 값 : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="le_Min">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="lbl_Max">
+         <property name="text">
+          <string>최대 값 : </string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="lbl_Pro">
+         <property name="text">
+          <string>적정 값</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="le_Pro">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btn_Data">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(211, 215, 207);</string>
+       </property>
+       <property name="text">
+        <string>데이터분석</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -205,7 +614,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1226</width>
+     <width>1467</width>
      <height>22</height>
     </rect>
    </property>

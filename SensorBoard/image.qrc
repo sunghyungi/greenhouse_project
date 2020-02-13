@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/new/image">
+        <file>Untitled Diagram.png</file>
+        <file>tomato.png</file>
+        <file>strawberry.png</file>
+        <file>banana.png</file>
+    </qresource>
+</RCC>

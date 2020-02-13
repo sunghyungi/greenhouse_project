@@ -1,4 +1,4 @@
-QT       += core gui sql
+QT       += core gui sql serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
@@ -16,24 +16,40 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    analysis.cpp \
+    buttons.cpp \
+    calendarwidget.cpp \
     devicemanager.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    qcustomplot.cpp
+    myplot.cpp \
+    mytable.cpp \
+    qcustomplot.cpp \
+    sql.cpp \
+    widget.cpp
 
 HEADERS += \
+    calendarwidget.h \
+    device/widget.h \
     devicemanager.h \
     login.h \
     mainwindow.h \
-    qcustomplot.h
+    qcustomplot.h \
+    ui_widget.h \
+    widget.h
 
 FORMS += \
+    calendarwidget.ui \
     devicemanager.ui \
     login.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES += \
+    image.qrc

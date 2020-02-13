@@ -40,15 +40,17 @@ void Login::on_btn_ExitLogin_clicked()
 void Login::on_btn_Login_clicked()
 {
     QSqlQuery qry;
-    qry.exec("select ID, PASSWORD, ISMANAGER from manager");
+    qry.prepare("select ID, pass=password(:pass), ISMANAGER, name from manager");
+    qry.bindValue(":pass", ui->le_Password->text());
+    qry.exec();
 
     while(qry.next()){
         if(ui->le_ID->text() == qry.value(0))
         {
-            if(ui->le_Password->text() == qry.value(1)){
+            if(qry.value(1)==1){
                 QMessageBox::information(this, "Login", "로그인에 성공하셨습니다.");
                 this->close();
-                MainWindow* w = new MainWindow(nullptr,qry.value(2).toInt());
+                MainWindow* w = new MainWindow(nullptr,qry.value(2).toInt(), qry.value(3).toString());
                 w->setAttribute(Qt::WA_DeleteOnClose);
                 w->show();
                 return;
