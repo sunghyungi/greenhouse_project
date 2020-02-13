@@ -1,3 +1,3 @@
 # greenhouse_project
 
-![Alt text]()
+![Alt text](mainwindow.png)
