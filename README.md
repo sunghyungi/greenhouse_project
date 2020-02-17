@@ -1,6 +1,6 @@
 # greenhouse_project
 ### sensorboard
-![Alt text](image/Breadboard_image.png)
+![Alt text](image/Breadboard_image.jpg)
 
 
 ### login
