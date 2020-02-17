@@ -5,6 +5,15 @@
 
 
 
-
 ### mainwindow
 ![Alt text](image/mainwindow.png)
+
+
+
+### calendar
+![Alt text](image/calendar.png)
+
+
+
+### device
+![Alt text](image/device.png)
