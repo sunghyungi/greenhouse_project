@@ -1,6 +1,6 @@
 # greenhouse_project
 ### usecasediagram
-<img src="image/diagram/manager_usecasediagram.png" width="60%" height="40%"></img>
+<img src="image/diagram/manager_usecasediagram.png" width="65%" height="50%"></img>
 
 
 ### classdiagram
