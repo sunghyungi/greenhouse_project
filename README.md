@@ -3,30 +3,20 @@
 <img src="image/diagram/manager_usecasediagram.png" width="70%" height="60%"></img>
 <img src="image/diagram/user_diagram.png" width="70%" height="60%"></img>
 
-
 ### classdiagram
-![Alt text](image/diagram/classdiagram.png)
-
-
+<img src="image/diagram/classdiagram.png" width="70%" height="60%"></img>
 
 ### sensorboard
-![Alt text](image/Breadboard_image.jpg)
-
+<img src="image/Breadboard_image.jpg" width="70%" height="60%"></img>
 
 ### login
-![Alt text](image/login.png)
-
-
+<img src="image/login.png" width="70%" height="60%"></img>
 
 ### mainwindow
-![Alt text](image/mainwindow.png)
-
-
+<img src="image/mainwindow.png" width="70%" height="60%"></img>
 
 ### calendar
-![Alt text](image/calendar.png)
-
-
+<img src="image/calendar.png" width="70%" height="60%"></img>
 
 ### device
-![Alt text](image/device.png)
+<img src="image/device.png" width="70%" height="60%"></img>
